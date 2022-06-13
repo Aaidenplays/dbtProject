@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: orders
+    database: FOOD_DELIVERY
+    schema: FACT_TABLES
+    tables:
+      - name: ORDERS
+
+  - name: food_delivery
+    database: FOOD_DELIVERY
+    schema: DIMENSIONS
+    tables:
+      - name: RESTAURANTSDATASEED
+      - name: USERS_STG
+      - name: MENU_ITEMS
+
+  - name: users
+    database: FOOD_DELIVERY
+    schema: DIMENSIONS
+    tables:
+      - name: USERS
+
+  - name: denormalized_orders
+    database: FOOD_DELIVERY
+    schema: BUSINESS_QUERY_VIEWS
+    tables:
+      - name: DENORMALIZED_ORDERS
